@@ -3,11 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { VideoUploader } from './components/VideoUploader';
 import { AnalysisResults } from './components/AnalysisResults';
 import { AnalysisProgress } from './components/AnalysisProgress';
-import { Brain, Video, Eye, Activity, Hand } from 'lucide-react';
+import { Video, Eye, Activity, Hand } from 'lucide-react';
 import type { AnalysisResult, VideoMetadata, VideoAnalysis, AnalysisState } from './types/analysis';
 import { analyzeVideo, getAnalysisStatus } from './services/api';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./components/ui/tabs";
 import { AnalysisReport } from "./components/AnalysisReport";
+
 
 function App() {
   const [videoMetadata, setVideoMetadata] = useState<VideoMetadata | null>(null);
@@ -173,9 +174,11 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <Brain className="w-8 h-8 text-blue-600 mr-3" />
-              <h1 className="text-2xl font-bold text-gray-900">
-                Political Analysis AI
+            <img src="/silentsignald.webp" alt="Logo" className="w-8 h-8 mr-3 rounded-lg" />
+              {/* <Brain className="w-8 h-8 text-blue-600 mr-3" /> */}
+              {/* <h1 className="text-2xl font-bold text-gray-900"> */}
+              <h1 className="text-2xl font-semibold text-gray-900 tracking-tight">
+                Silent Signals
               </h1>
             </div>
             {videoMetadata && (
