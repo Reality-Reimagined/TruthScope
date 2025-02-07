@@ -1,0 +1,43 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Local env files
+.env
+
+# Logs
+*.log
+
+# Byte-compiled files
+*.pyc
+*.pyo
+
+# IDE specific files
+.vscode/
+.idea/
+
+# MacOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+
+node_modules
+dist
+dist-ssr
+*.local
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+bodylang/   
