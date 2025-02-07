@@ -213,7 +213,7 @@ function App() {
                 className="text-center mb-12"
               >
                 <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-                  Welcome to Political Analysis AI
+                  Welcome to Silent Signals
                 </h1>
                 <p className="text-lg text-gray-600">
                   Unlock insights into political speeches and debates with cutting-edge AI analysis.
