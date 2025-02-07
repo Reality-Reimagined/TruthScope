@@ -39,6 +39,17 @@ export interface ConfidenceMetric {
   timestamp: number;
 }
 
+export interface QuestionResponse {
+  responseStyle: string;
+  topicHandling: string;
+  behavioralPatterns: string[];
+}
+
+export interface TimelineEvent {
+  timestamp: number;
+  description: string;
+}
+
 export interface AnalysisResult {
   timestamp: number;
   facialExpression: AnalysisDetail;
@@ -54,6 +65,8 @@ export interface AnalysisResult {
     description: string;
     significance: string;
   }[];
+  questionResponse: QuestionResponse;
+  timeline: TimelineEvent[];
 }
 
 export interface VideoAnalysis {
