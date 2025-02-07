@@ -334,7 +334,7 @@ async def analyze_uploaded_video(
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
                 response_schema=VideoAnalysisResponse,
-                max_output_tokens=1000
+                max_output_tokens=2000
             )
         )
 
