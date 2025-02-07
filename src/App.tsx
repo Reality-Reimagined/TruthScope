@@ -46,7 +46,10 @@ function App() {
         progress: 0.1,
         message: 'Uploading video...',
         timestamp: new Date().toISOString(),
-        steps: steps
+        steps: steps.map(step => ({
+          ...step,
+          status: step.status as "complete" | "error" | "in_progress" | "pending"
+        }))
       });
 
       const id = await analyzeVideo(file);
@@ -68,7 +71,10 @@ function App() {
       const status = await getAnalysisStatus(id);
       setUploadState({
         ...status.state,
-        steps: steps
+        steps: steps.map(step => ({
+          ...step,
+          status: step.status as "complete" | "error" | "in_progress" | "pending"
+        }))
       });
       setAnalysis(status);
     } catch (err) {
