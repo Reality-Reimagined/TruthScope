@@ -1,6 +1,7 @@
 import type { VideoAnalysis } from '../types/analysis';
 
-const API_BASE_URL = 'http://localhost:8000';
+// const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'https://focused-achievement-production.up.railway.app/';
 
 export const analyzeVideo = async (file: File | string): Promise<string> => {
   const formData = new FormData();
